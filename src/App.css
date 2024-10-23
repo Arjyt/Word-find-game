@@ -1,0 +1,111 @@
+/* App.css */
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif; /* Set a default font for the app */
+}
+
+h1 {
+  background-color: lightgreen; /* Header background color */
+  padding: 10px; /* Padding for the header */
+  margin: 0; /* Remove default margin */
+}
+
+.game-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row;
+  justify-content: center; /* Center the container */
+  align-items: flex-start; /* Align items to the top */
+  margin: 20px; /* Margin around the container */
+  padding: 10px; /* Padding for the container */
+}
+
+.grid {
+  display: grid; /* Use grid for the letters */
+  grid-template-columns: repeat(13, 40px); /* Set fixed number of columns */
+  gap: 5px; /* Space between cells */
+  margin-right: 100px; /* Space between grid and word list */
+}
+
+.cell {
+  width: 40px; /* Fixed width for each cell */
+  height: 40px; /* Fixed height for each cell */
+  display: flex; /* Use flexbox for cell contents */
+  justify-content: center; /* Center contents horizontally */
+  align-items: center; /* Center contents vertically */
+  border: 1px solid #ccc; /* Border for each cell */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 24px; /* Font size for letters */
+  background-color: #f0f0f0; /* Background color */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.cell.selected {
+  background-color: #ffeb3b; /* Highlight selected cell */
+}
+
+.cell.found {
+  background-color: #4caf50; /* Highlight found cells */
+  color: white; /* Text color for found cells */
+}
+
+.words-list {
+  max-width: 400px; /* Adjust width as necessary */
+  text-align: left; /* Align text to the left */
+}
+
+.words-list h2 {
+  color: green; /* Color for the words list title */
+}
+
+.words-list li.found {
+  color: #4caf50; /* Color for found words */
+  font-weight: bold; /* Make found words bold */
+  text-decoration: line-through;
+}
+
+.words-list li {
+  padding: 5px; /* Space between list items */
+}
+.btn {
+  margin: 5px; /* Space between buttons */
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none; /* Remove default border */
+  background-color: #008cba; /* Button background color */
+  color: white; /* Button text color */
+  border-radius: 5px; /* Rounded corners for buttons */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.btn:hover {
+  background-color: #005f75; /* Darken button on hover */
+}
+.win-container {
+  margin-top: 20px; /* Space above win message */
+}
+
+.win-message {
+  font-size: 94px; /* Increase font size for win message */
+  color: #0e9212; /* Color for win message */
+  margin-top: 70px;
+}
+.words-list button {
+  background-color: #008cba; /* Default button background color */
+  color: white; /* Text color */
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.words-list button.active {
+  background-color: #4caf50; /* Background color when active */
+}
+
+.words-list button:hover {
+  background-color: #005f75; /* Darker background color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
